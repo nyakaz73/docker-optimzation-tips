@@ -136,10 +136,22 @@ ubuntu       optimal   9d013bb6aae5   6 seconds ago   144MB
 docker build -t go:multi .
 ```
 
-checking size
+before scratch checking size
 
 ```sh
 docker images
 REPOSITORY   TAG       IMAGE ID       CREATED         SIZE
 go           multi     9460cedbb9e4   4 seconds ago   3.94MB
+```
+
+```sh
+docker build -f Dockerfile.layersoptimal -t go:scratch .
+```
+
+after scratch size
+
+```sh
+─❯ docker images
+REPOSITORY   TAG       IMAGE ID       CREATED          SIZE
+go           scratch   d660ed6a4fef   34 minutes ago   1.95MB
 ```
