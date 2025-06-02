@@ -1,3 +1,5 @@
+## Show some ❤️ and ⭐ the repo to support the project
+
 ### Build base node
 
 ```sh
